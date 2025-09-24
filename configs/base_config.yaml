@@ -1,0 +1,7 @@
+# Dataset configuration
+data:
+  train_path: "data/train"
+  test_path: "data/test"
+  val_path: "data/val"  # divide test into test and val during model training 
+  dataset_name: "35_odor_processed_data"
+  num_classes: 35  # Update based on your dataset
