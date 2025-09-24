@@ -25,3 +25,11 @@ model:
   input_channels: 1
   input_size: 256  # Adjust based on your actual image size
   dropout_rate: 0.3
+
+
+# Training configuration
+training:
+  epochs: 100
+  criterion: "CrossEntropyLoss"
+  optimizer: "Adam"
+  learning_rate: 0.00001
