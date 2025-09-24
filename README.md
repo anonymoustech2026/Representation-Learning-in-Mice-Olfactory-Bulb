@@ -78,6 +78,69 @@ odor-classification/
 └── README.md                    # This file
 ```
 
+## Usage
+
+### Training
+
+**Basic training:**
+```bash
+python scripts/train.py
+```
+
+**With custom configuration:**
+```bash
+python scripts/train.py --config configs/experiment_config.yaml
+```
+
+### Evaluation
+
+**Evaluate trained model:**
+```bash
+python scripts/evaluate.py
+```
+
+**With custom model and output directory:**
+```bash
+python scripts/evaluate.py \
+  --model_path results/my_model.pth \
+  --output_dir results/evaluation \
+  --config configs/base_config.yaml
+```
+
+### Grad-CAM Visualization
+
+**Analyze model interpretability:**
+```bash
+python scripts/grad_cam_analysis.py
+```
+
+##  Evaluation Metrics
+
+The framework provides comprehensive evaluation including:
+
+- **Basic Metrics**: Accuracy, Loss
+- **Per-Class Metrics**: Precision, Recall, F1-Score
+- **Confusion Matrix**: Visual and numerical analysis
+- **ROC Curves**: Micro, Macro, and per-class ROC analysis
+- **Grad-CAM**: Visual explanation of model decisions
+
+##  Output Files
+
+After training and evaluation, you'll find:
+
+```
+results/
+├── trained_model.pth              # Saved model weights
+├── confusion_matrix.png           # Confusion matrix plot
+├── roc_curves.png                # ROC curve analysis
+├── classification_report.txt      # Detailed metrics report
+├── evaluation_summary.txt         # Summary of all metrics
+├── training_curves.png           # Training/validation curves
+└── grad_cam_analysis/             # Grad-CAM visualizations
+    ├── grad_cam_conv3_*.png
+    ├── grad_cam_conv4_*.png
+    └── grad_cam_conv5_*.png
+```
 
 
 
