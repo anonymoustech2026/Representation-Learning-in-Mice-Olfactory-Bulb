@@ -9,6 +9,7 @@ from src.dataset.loaders import load_image_datasets, create_dataloaders
 from src.evaluation.metrics import evaluate_model, print_evaluation_results
 from src.utils.visualization import plot_confusion_matrix, get_class_names_from_dataset
 from src.evaluation.roc_analysis import analyze_roc_performance
+from src.evaluation.detailed_metrics import analyze_per_class_performance
 
 def main():
     # Load config
@@ -105,6 +106,12 @@ def main():
 
     print("Performing ROC analysis...")
     roc_results = analyze_roc_performance(model, test_loader, device, num_classes, class_names)
+
+    print("Analyzing detailed per-class performance...")
+    detailed_metrics = analyze_per_class_performance(
+        model, test_loader, device, num_classes, class_names,
+        save_report_path='results/classification_report.txt'
+    )
 
 if __name__ == "__main__":
     main()
