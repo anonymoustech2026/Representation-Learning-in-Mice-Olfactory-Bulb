@@ -17,3 +17,11 @@ dataloader:
   batch_size: 16
   num_workers: 2
   pin_memory: true
+
+
+# Model configuration
+model:
+  name: "OdorCNN"
+  input_channels: 1
+  input_size: 256  # Adjust based on your actual image size
+  dropout_rate: 0.3
