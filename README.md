@@ -1,7 +1,9 @@
 # Representation-Learning-in-Mice-Olfactory-Bulb
 Anonymous Repository for ICLR 2026 
 
-[ColorVSolfaction.pdf](https://github.com/user-attachments/files/22523426/ColorVSolfaction.pdf)
+<img width="1132" height="395" alt="ol4" src="https://github.com/user-attachments/assets/b313a17a-bce3-4d8d-8497-7d472a77db79" />
+
+<img width="1801" height="999" alt="gc" src="https://github.com/user-attachments/assets/fdbfe039-787b-40af-bfc7-15e34b3466bf" />
 
 
 
@@ -146,9 +148,7 @@ results/
     └── grad_cam_conv5_*.png
 ```
 
-<img width="97" height="97" alt="n_methylpiperidine 53" src="https://github.com/user-attachments/assets/37515f44-e288-4f7c-9cf8-69600c72f1cc" />
+<img width="386" height="388" alt="valeric_acid" src="https://github.com/user-attachments/assets/d0f34970-e7d9-4b81-b1a7-33a23c4b364d" />
 
-
-<img width="305" height="305" alt="n_methylpiperidine gc" src="https://github.com/user-attachments/assets/4c3b7b2e-5607-4b33-b58c-fc74ccb9695b" />
 
 
