@@ -5,3 +5,9 @@ data:
   val_path: "data/val"  # divide test into test and val during model training 
   dataset_name: "35_odor_processed_data"
   num_classes: 35  # Update based on your dataset
+
+# Transform configuration
+transforms:
+  grayscale: true
+  normalize_mean: 0.5
+  normalize_std: 0.5
