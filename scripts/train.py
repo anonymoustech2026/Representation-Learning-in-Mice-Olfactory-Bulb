@@ -6,6 +6,7 @@ import torch.optim as optim
 import yaml
 from src.models.cnn import OdorCNN
 from src.dataset.loaders import load_image_datasets, create_dataloaders
+from src.evaluation.metrics import evaluate_model, print_evaluation_results
 
 def main():
     # Load config
@@ -91,6 +92,10 @@ def main():
     # Save the trained model
     torch.save(model.state_dict(), 'results/trained_model.pth')
     print("Model saved to results/trained_model.pth")
+
+    print("Evaluating model on test set...")
+    test_results = evaluate_model(model, test_loader, device, num_classes)
+    print_evaluation_results(test_results)
 
 if __name__ == "__main__":
     main()
