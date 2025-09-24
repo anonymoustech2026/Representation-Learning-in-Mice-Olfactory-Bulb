@@ -12,6 +12,12 @@ from .roc_analysis import (
     print_roc_summary,
     analyze_roc_performance
 )
+from .detailed_metrics import (
+    calculate_detailed_metrics,
+    print_detailed_metrics,
+    generate_classification_report,
+    analyze_per_class_performance
+)
 
 __all__ = [
     'evaluate_model',
@@ -21,5 +27,9 @@ __all__ = [
     'compute_roc_curves',
     'plot_multiclass_roc',
     'print_roc_summary',
-    'analyze_roc_performance'
+    'analyze_roc_performance',
+    'calculate_detailed_metrics',
+    'print_detailed_metrics',
+    'generate_classification_report',
+    'analyze_per_class_performance'
 ]
