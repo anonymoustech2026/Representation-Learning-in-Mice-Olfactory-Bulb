@@ -11,3 +11,9 @@ transforms:
   grayscale: true
   normalize_mean: 0.5
   normalize_std: 0.5
+
+# Dataloader configuration
+dataloader:
+  batch_size: 16
+  num_workers: 2
+  pin_memory: true
