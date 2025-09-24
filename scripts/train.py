@@ -7,6 +7,8 @@ import yaml
 from src.models.cnn import OdorCNN
 from src.dataset.loaders import load_image_datasets, create_dataloaders
 from src.evaluation.metrics import evaluate_model, print_evaluation_results
+from src.utils.visualization import plot_confusion_matrix, get_class_names_from_dataset
+from src.evaluation.roc_analysis import analyze_roc_performance
 
 def main():
     # Load config
@@ -96,6 +98,13 @@ def main():
     print("Evaluating model on test set...")
     test_results = evaluate_model(model, test_loader, device, num_classes)
     print_evaluation_results(test_results)
+
+    print("Creating confusion matrix...")
+    class_names = get_class_names_from_dataset(test_dataset)
+    cm = plot_confusion_matrix(model, test_loader, device, class_names)
+
+    print("Performing ROC analysis...")
+    roc_results = analyze_roc_performance(model, test_loader, device, num_classes, class_names)
 
 if __name__ == "__main__":
     main()
