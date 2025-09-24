@@ -1,6 +1,10 @@
 # Representation-Learning-in-Mice-Olfactory-Bulb
 Anonymous Repository for ICLR 2026 
 
+[ColorVSolfaction.pdf](https://github.com/user-attachments/files/22523426/ColorVSolfaction.pdf)
+
+
+
 ### Prerequisites
 - Python 3.9 or higher
 
@@ -142,7 +146,9 @@ results/
     └── grad_cam_conv5_*.png
 ```
 
+<img width="97" height="97" alt="n_methylpiperidine 53" src="https://github.com/user-attachments/assets/37515f44-e288-4f7c-9cf8-69600c72f1cc" />
 
 
+<img width="305" height="305" alt="n_methylpiperidine gc" src="https://github.com/user-attachments/assets/4c3b7b2e-5607-4b33-b58c-fc74ccb9695b" />
 
 
